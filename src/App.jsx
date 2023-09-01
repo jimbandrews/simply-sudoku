@@ -1,8 +1,8 @@
-import Row from "./components/Row";
+import SudokuTable from "./components/SudokuTable";
 
 function App() {
   return (
-    <Row />
+    <SudokuTable />
   );
 }
 
