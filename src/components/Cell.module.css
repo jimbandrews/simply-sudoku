@@ -1,7 +1,6 @@
 .cell {
   display: flex;
   justify-content: center;
-  border-style: solid;
 }
 
 .number {
