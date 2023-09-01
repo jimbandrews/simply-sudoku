@@ -26,7 +26,7 @@ function SudokuTable() {
   });
 
   return (
-    <Table>
+    <Table bordered>
       <tbody>
         { rowsArray }
       </tbody>

@@ -1,8 +1,11 @@
 import SudokuTable from "./components/SudokuTable";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <SudokuTable />
+    <main>
+      <SudokuTable />
+    </main>
   );
 }
 
