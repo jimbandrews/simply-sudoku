@@ -4,9 +4,9 @@ import { samplePuzzle } from "../assets/constants";
 
 function SudokuTable() {
   function buildRow(sudokuRow) {
-    const rowCells = sudokuRow.map((cell) => {
+    const rowCells = sudokuRow.map((cell, cellIndex) => {
       return (
-        <td>
+        <td key={ cellIndex }>
           <Cell solution={ cell.solution } />
         </td>
       );
@@ -15,11 +15,11 @@ function SudokuTable() {
     return rowCells;
   }
 
-  const rowsArray = samplePuzzle.map((rowData) => {
+  const rowsArray = samplePuzzle.map((rowData, rowDataIndex) => {
     const rowCellsArray = buildRow(rowData);
 
     return (
-      <tr>
+      <tr key={ rowDataIndex }>
         { rowCellsArray }
       </tr>
     );
