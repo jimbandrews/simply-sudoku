@@ -1,0 +1,10 @@
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.row-item {
+  flex-grow: 1;
+}
