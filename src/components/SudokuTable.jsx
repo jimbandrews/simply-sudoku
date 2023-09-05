@@ -1,27 +1,15 @@
 import Table from "react-bootstrap/Table";
-import Cell from "./Cell";
+import Row from "./Row";
 import { samplePuzzle } from "../assets/constants";
 
 function SudokuTable() {
-  function buildRow(sudokuRow) {
-    const rowCells = sudokuRow.map((cell, cellIndex) => {
-      return (
-        <td key={ cellIndex }>
-          <Cell solution={ cell.solution } />
-        </td>
-      );
-    });
-
-    return rowCells;
-  }
-
   const rowsArray = samplePuzzle.map((rowData, rowDataIndex) => {
-    const rowCellsArray = buildRow(rowData);
 
     return (
-      <tr key={ rowDataIndex }>
-        { rowCellsArray }
-      </tr>
+      <Row
+        sudokuRow={ rowData }
+        rowKey={ rowDataIndex}
+      />
     );
   });
 

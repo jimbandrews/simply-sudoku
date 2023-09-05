@@ -1,10 +1,16 @@
 import styles from './Cell.module.css';
 
-function Cell({ solution }) {
+function Cell({ solution, revealed, cellKey }) {
+  const contents = revealed ? solution : '';
+
   return (
-    <div className={ styles.cell }>
-      <p className={ styles.number }>{ solution }</p>
-    </div>
+    <td key={ cellKey }>
+      <div className={ styles.cell }>
+        <p
+          className={ styles.number }
+        >{ contents }</p>
+      </div>
+    </td>
   )
 
 };
